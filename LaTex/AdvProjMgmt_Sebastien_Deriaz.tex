@@ -1,0 +1,73 @@
+\documentclass[]{article}
+
+
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm,includehead]{geometry}
+\usepackage{lastpage}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{subfiles}
+\usepackage[bottom]{footmisc}
+\usepackage{float}
+\usepackage{epsfig}
+
+
+
+
+% Settings
+\newcommand{\Author}{Sébastien Deriaz}
+\newcommand{\professor}{Vincent Bourquin}
+\newcommand{\cours}{CM-AdvProjMgmt}
+\newcommand{\titre}{Projet de gestion}
+
+
+
+
+\usepackage[outdir=./]{epstopdf}
+
+% Other packages
+
+
+% Page config
+\fancyhead[L]{\includegraphics[height=8mm]{mse-full-cropped.pdf}}
+
+\pagestyle{fancy}
+\fancyfoot[C]{\thepage\ / \pageref{LastPage}}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\includegraphics[height=8mm]{mse-full-cropped.pdf}
+\hfill
+\includegraphics[height=8mm]{HES-SO_logo_Pantone.pdf}
+\end{center}
+\vfill
+\begin{center}
+\Huge \titre
+\end{center}
+\begin{center}
+\large
+\begin{tabular}{ll}
+Département : & EIE\\
+Unité d'enseignement : & \cours
+\end{tabular}
+\end{center}
+\vfill
+\begin{center}
+\large
+\begin{tabular}{ll}
+\Large Auteur & \Large \Author\\
+Professeur & \professor\\ 
+Date & \today
+\end{tabular}
+\end{center}
+\vfill
+
+\pagebreak
+\tableofcontents
+\pagebreak
+\subfile{introduction}
+
+\end{document}
