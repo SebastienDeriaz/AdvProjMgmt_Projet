@@ -1,0 +1,22 @@
+\documentclass[AdvProjMgmt_Sebastien_Deriaz]{subfiles}
+
+\begin{document}
+\section{Description du projet}
+\subsection{Contexte}
+Ce travail de Bachelor a été proposé par la société Betech SA. La problématique apportée est la mise en place d'un système permettant de piloter un robot de test de modules électroniques. Un précédent système spécifique avait été développé mais des modifications sur la procédure l'ont rendu obsolète.\\
+Le but du travail a été de réaliser un système polyvalent capable de s'adapter aux contraintes futures du système.\\
+Ce travail découle également d'un initiative personnelle visant à créer un environnement pour le contrôle d'instruments de mesure.\\
+L'objectif est de simplifier le plus possible l'installation et l'utilisation du programme afin de faciliter l'accès à la plateforme pour les utilisateurs novices.
+\subsection{Résumé du projet}
+Le projet est, dans son entièreté, réalisé sous forme informatique, il n'y a pas de réalisation physique. Le travail est séparé en deux parties :
+\begin{enumerate}
+\item Conception d'un programme en C++ gérant la communication avec les appareils et le traitement des données
+\item Création d'un package python, communiquant avec le programme C++, qui permet à l'utilisateur d'écrire des scripts de la manière la plus simple possible
+\end{enumerate}
+Le programme en C++ possède une interface graphique pour simplifier la configuration du système. Ceci est particulièrement utile pour des utilisateurs novices.\\
+Le but premier est le contrôle d'appareils de laboratoire (oscilloscopes, mnultimètres, etc...), notamment la configuration des appareils, le démarrage de mesures et la lecture de ces mesures.\\
+L'objectif secondaire et le contrôle d'appareils "spécialisés" (comme des modules d'entrées-sorties pilotés par Modbus TCP). Ces appareils, à condition qu'ils possède un protocole de communication standard et ouvert, peuvent être pilotés au même titre que les équipements de laboratoire.\\
+Un système de "drivers" permet de réaliser une couche d'abstraction entre le langage spécifique de chaque appareil et les commandes python. Cette partie est open-source et des contributeurs peuvent amener de nouveaux drivers.\\
+\subsubsection{Résultat}
+Le proof of concept s'est montré fructueux et le projet final a pu être mené a bien. Il a d'ailleurs été mis en œuvre pour la production et la caractérisation de modules électroniques dans le semestre suivant le travail de Bachelor (semestre d'automne).
+\end{document}
